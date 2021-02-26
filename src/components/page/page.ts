@@ -4,7 +4,7 @@ export interface Composable{
     addChild(child: Component): void;
 }
 
-class PageItemComponent extends BaseComponent<HTMLElement>{
+class PageItemComponent extends BaseComponent<HTMLElement> implements Composable{
     constructor(){
         super(`<li class="page-item">
                 <section class="page-item__body">
@@ -20,7 +20,7 @@ class PageItemComponent extends BaseComponent<HTMLElement>{
     }
 }
 
-export class PageComponent extends BaseComponent <HTMLUListElement>{
+export class PageComponent extends BaseComponent <HTMLUListElement> implements Composable{
     constructor(){
         super('<ul class="page"></ul>');
     }
